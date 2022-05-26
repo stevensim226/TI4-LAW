@@ -2,6 +2,7 @@ from flask import Flask, request
 from database import save_mahasiswa
 
 app = Flask(__name__)
+app.url_map.strict_slashes = False
 
 @app.route('/update', methods=["POST"])
 def update_service():

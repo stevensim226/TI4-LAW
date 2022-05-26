@@ -2,6 +2,7 @@ from flask import Flask, request
 from database import find_mahasiswa
 
 app = Flask(__name__)
+app.url_map.strict_slashes = False
 
 @app.route('/read/<npm>', methods=["GET"])
 def read_normal_service(npm):
